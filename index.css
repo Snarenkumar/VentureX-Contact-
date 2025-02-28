@@ -1,16 +1,7 @@
-
-/* Global Reset */
-
-
-
-
-
-:root{
+:root {
   --accent--primary-back: #060606;
-
-
-
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,14 +9,17 @@
 }
 
 body {
-  font-family: 'Oswald', sans-serif;
+  
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.667em;
+  font-family: Clarity City, sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.667em;
   background-color: #060606;
 }
 
-/* Navbar */
 nav {
   opacity: 1;
   z-index: 1000;
@@ -38,14 +32,29 @@ nav {
 
 .mainnav-inside {
   max-width: 1268px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
-.img-nav {
-  width: 100%;
+.nav-cartext p{
+  font-size: 18px;
+
+}
+
+.nav-cart-p {
+  height: 22px;
+  width: 22px;
+  background-color: blue;
+  /* margin-top: 6px; */
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo a {
@@ -58,11 +67,9 @@ nav {
 .logo {
   width: 100%;
   max-width: 250px;
-  height: 200px;
   transition: transform 0.3s, color 0.3s;
 }
 
-/* Sidebar Menu */
 .wrapper {
   border: 3px solid white;
   position: fixed;
@@ -90,6 +97,19 @@ nav {
 .wrapper ul li {
   margin: 15px 0;
 }
+.nav-carttxt p:hover{
+  color: #0047ff;
+  
+}
+
+svg:hover{
+  transform: scale(0.9,0.9);
+  
+}
+/* .logo a :hover{
+  transform: scale(2,3);
+  
+} */
 
 .wrapper ul li a {
   text-decoration: none;
@@ -104,7 +124,7 @@ nav {
   transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-img{
+img {
   max-width: 100%;
   display: inline-block;
 }
@@ -113,14 +133,13 @@ img{
   color: #1a73e8;
 }
 
-/* Menu Button */
 .menu-btn {
   position: absolute;
   z-index: 2;
-  right: 20px;
+  right: 94px;
   top: 48px;
-  width: 60px; /* Increased width */
-  height: 50px; /* Increased height */
+  width: 60px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,18 +148,14 @@ img{
   color: white;
 }
 
-/* Hamburger Menu Lines */
 .menu-btn span,
 .menu-btn:before,
 .menu-btn:after {
   content: "";
   position: absolute;
-  width: 70%;
-  height: 5px; /* Thicker lines */
-
-
-  height: 5px; /* Thicker lines */
-  background: #fff; /* White color */
+  width: 52px;
+  height: 3px;
+  background: #fff;
   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -152,7 +167,6 @@ img{
   transform: translateY(15px);
 }
 
-/* Close Animation */
 #active:checked + .menu-btn span {
   transform: scaleX(0);
 }
@@ -167,7 +181,6 @@ img{
   top: 20px;
 }
 
-/* Close Overlay */
 .close {
   z-index: 1;
   width: 100%;
@@ -176,7 +189,18 @@ img{
   transition: background 0.6s;
 }
 
-/* Menu Open Effects */
+.nav-carttxt {
+  color: white;
+}
+
+.nav-cartext {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-right: 65px;
+}
+
 #active:checked ~ .wrapper ul li a {
   opacity: 1;
   transform: none;
@@ -185,9 +209,6 @@ img{
   transform: translateX(-100px);
 }
 
-/* Hide Checkbox */
 input[type="checkbox"] {
   display: none;
 }
-
-

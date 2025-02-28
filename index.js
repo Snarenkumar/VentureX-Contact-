@@ -21,6 +21,6 @@
 
 
 
-// const counterval = 0; 
+const counterval = 0; 
 
-// document.getElementById("counter").innerText =counterval;
+document.getElementById("counter").innerText =counterval;
