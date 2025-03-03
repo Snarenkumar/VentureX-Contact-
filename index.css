@@ -5,7 +5,6 @@
 }
 
 body {
-  
   font-size: 18px;
   font-weight: 300;
   line-height: 1.667em;
@@ -37,9 +36,8 @@ nav {
   padding-left: 24px;
   padding-right: 24px;
 }
-.nav-cartext p{
+.nav-cartext p {
   font-size: 18px;
-
 }
 
 .nav-cart-p {
@@ -86,13 +84,11 @@ nav {
   padding-left: 24px;
   padding-right: 24px;
   opacity: 1;
-
 }
 .container1-end {
   padding-top: 76px;
-  padding-bottom: 120px;
+  padding-bottom: 120px;  
   border-bottom: 1px solid #8b8b8b;
-
 }
 .main-heading-contact {
   color: white;
@@ -101,16 +97,145 @@ nav {
   line-height: 1.25em;
   margin-bottom: 16px;
 }
+/* input[type=submit]{
+  border-bottom: 1px solid white;
+
+} */
+
+
+.onhover-input:hover{
+
+  border-color: #0047ff;
+  box-shadow: 0 2px 12px 0 #14142b1a;
+  color: white;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+.conatctus-inputs-submit {
+  margin-top: 83px;
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+.icon-rotate {
+  rotate: -45deg;
+  position: relative;
+  left: 10px;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+  transform-style: preserve-3d;
+  
+}
+.w-button:hover{
+  color:#0047ff;
+}
+.border-bottom:hover{
+  
+  border-color: #0047ff;
+  box-shadow: 0 2px 12px 0 #14142b1a;
+  color:#0047ff ;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+.border-bottom {
+  width: 205px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.75px solid white;
+}
+
+.contact-btn {
+  padding-right: 34px;
+  -webkit-appearance: button;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.417em;
+  
+}
+/* .contact-btn :hover{
+
+  
+  border-color: #0047ff;
+  box-shadow: 0 2px 12px 0 #14142b1a;
+  color:#0047ff ;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+} */
+.w-button {
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  /* border-bottom: 1px solid white; */
+  color: white;
+  text-align: left;
+  background-color: #0000;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 8px;
+  padding-right: 0px;
+  font-weight: 600;
+  line-height: 1em;
+  text-decoration: none;
+  transition-property: none;
+  display: flex;
+  outline: none;
+  border: 0;
+}
+.outline {
+  outline: none;
+}
+.arrow :hover {
+
+  transform: translate3d(3px, -3px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+  transform-style: preserve-3d;
+
+}
+/* #message:hover {
+ 
+  border-color: #0047ff;
+  box-shadow: 0 2px 12px 0 #14142b1a;
+  color: white;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+
+} */
+
+
+#message {
+  outline: none;
+
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: var(--neutral--300) var(--neutral--300) var(--neutral--600);
+  box-shadow: 0 2px 7px 0 var(--general--shadow-02);
+  color: var(--neutral--400);
+  background-color: #0000;
+  border-radius: 0;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 144px;
+  max-height: 200px;
+  margin-bottom: 0;
+  padding: 28px 0;
+  font-size: 20px;
+  line-height: 1.1em;
+  transition: box-shadow 0.3s, color 0.3s, border-color 0.3s;
+  height: auto;
+  min-width: 100%;
+  max-width: 100%;
+}
+textarea {
+  overflow: auto;
+}
 .text-no-warp {
   white-space: nowrap;
 }
 .pd-top---bottom-40px {
   padding-top: 40px;
   padding-bottom: 40px;
-
 }
 .icons-contact {
-
   display: flex;
   flex-direction: row;
   row-gap: 22px;
@@ -118,17 +243,12 @@ nav {
   font-family: Social Icons Font, sans-serif;
   line-height: 21px;
   max-width: 100%;
-  
 }
 .white-icon {
   font-size: 25px;
   color: rgb(255, 255, 255);
-  transform: translate3d(0px, 0px, 0px) 
-             scale3d(1, 1, 1) 
-             rotateX(0deg) 
-             rotateY(0deg) 
-             rotateZ(0deg) 
-             skew(0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg);
   transform-style: preserve-3d;
   line-height: 21px;
 }
@@ -144,7 +264,6 @@ nav {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 300;
-
 }
 .contact-details {
   display: flex;
@@ -153,8 +272,6 @@ nav {
   grid-row-gap: 16px;
   justify-content: space-between;
   max-width: 568px;
-
-
 }
 .margintop-p-contactus {
   margin-bottom: 26px;
@@ -167,7 +284,7 @@ nav {
   text-decoration: none;
 }
 a {
-  transition: color .3s;
+  transition: color 0.3s;
 }
 .get-in-touch---line {
   background-color: #8b8b8b;
@@ -175,18 +292,14 @@ a {
   min-height: 100%;
 }
 .left-containerouter {
-  
   max-width: 477px;
   opacity: 1;
-
 }
 .hero-section {
-  display:flex;
+  display: flex;
   flex-direction: row;
-  
-
 }
-.left-containerouter{
+.left-containerouter {
   align-self: start;
 }
 #active:checked ~ .wrapper {
@@ -211,11 +324,9 @@ a {
   margin-bottom: 0;
   padding: 0;
   min-height: 597px;
-
 }
 .conatctus-inputs-m {
-  
-  row-gap:  40px;
+  row-gap: 40px;
   column-gap: 200px;
 }
 
@@ -224,9 +335,8 @@ a {
   max-width: 546px;
   width: 100%;
   margin-left: 130px;
-
 }
-.input{
+.input {
   border-style: none none solid;
   border-width: 1px;
   border-color: black black #8b8b8b;
@@ -239,23 +349,40 @@ a {
   padding: 16px 24px 16px 0;
   font-size: 20px;
   line-height: 1.1em;
-  transition: box-shadow .3s, color .3s, border-color .3s;
+  transition: box-shadow 0.3s, color 0.3s, border-color 0.3s;
   border-bottom: 1px solid #ccc;
   width: 100%;
   height: 38px;
   display: block;
   margin: 0;
   font: inherit;
+}
 
-
+.outline:focus {
+  outline: none;
 }
 .w-input {
   margin-bottom: 40px;
 }
 .input-contactus {
   width: 100%;
-
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.417em;
 }
+.fa-arrow-up-right {
+  font-size: 25px;
+  font-family: Line Rounded Icons, sans-serif;
+  font-weight: 400;
+  position: absolute;
+  top: 2px;
+  bottom: 0;
+  right: 0;
+}
+
 .wrapper ul {
   position: absolute;
   top: 60%;
@@ -268,19 +395,16 @@ a {
 .wrapper ul li {
   margin: 15px 0;
 }
-.nav-carttxt p:hover{
+.nav-carttxt p:hover {
   color: #0047ff;
-  
 }
 .contactus-main-text {
   display: flex;
   flex-direction: row;
-
 }
 
-svg:hover{
-  transform: scale(0.9,0.9);
-  
+svg:hover {
+  transform: scale(0.9, 0.9);
 }
 /* .logo a :hover{
   transform: scale(2,3);
@@ -297,7 +421,8 @@ svg:hover{
   position: absolute;
   line-height: 50px;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: opacity 0.3s ease,
+    transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 img {

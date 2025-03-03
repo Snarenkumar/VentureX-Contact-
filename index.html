@@ -119,7 +119,7 @@
                 <form action="" method="post">
                   <div class="input-contactus conatctus-inputs-m">
                     <input
-                      class="input w-input"
+                      class="input w-input onhover-input outline"
                       maxlength="256"
                       name="Name"
                       data-name="Name"
@@ -131,7 +131,7 @@
                   </div>
                   <div class="input-contactus conatctus-inputs-m">
                     <input
-                      class="input w-input"
+                      class="input w-input onhover-input outline"
                       maxlength="256"
                       name="Name"
                       data-name="Name"
@@ -143,15 +143,39 @@
                   </div>
                   <div class="input-contactus conatctus-inputs-m">
                     <input
-                      class="input w-input"
+                      class="input onhover-input w-input outline"
                       maxlength="256"
                       name="Name"
                       data-name="Name"
                       placeholder="What’s your company?"
                       type="text"
-                      id="name"
                       required=""
                     />
+                  </div>
+                  <div class="conatctus-inputs-m input-contactus">
+                    <textarea
+                      id="message"
+                      name="Message"
+                      maxlength="5000"
+                      data-name="Message"
+                      placeholder="Enter your message here..."
+                      required=""
+                      class="onhover-input text-area w-input"
+                    ></textarea>
+                  </div>
+                  <div class="input-contactus conatctus-inputs-submit">
+                    <div class="border-bottom onhover-input">
+                      <input
+                        type="submit"
+                        data-wait="Please wait..."
+                        id="submit"
+                        class="onhover-input  contact-btn w-button"
+                        value="Send Message"
+                      />
+                      <div class="arrow ">
+                        <i class="fa-solid fa-arrow-right-long icon-rotate"></i>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
