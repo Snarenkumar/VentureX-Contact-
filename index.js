@@ -25,31 +25,51 @@ const counterval = 0;
 
 document.getElementById("counter").innerText =counterval;
 
-const carouselInner = document.querySelector('.carousel-inner');
-const items = document.querySelectorAll('.carousel-item');
-const prevButton = document.querySelector('.carousel-control.prev');
-const nextButton = document.querySelector('.carousel-control.next');
-let index = 0;
 
-function updateCarousel() {
-  const offset = -index * 100;
-  carouselInner.style.transform = `translateX(${offset}%)`;
-}
 
-prevButton.addEventListener('click', () => {
-  if (index > 0) {
-    index--;
-  } else {
-    index = items.length - 1;
-  }
-  updateCarousel();
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderContainer = document.querySelector('.slider-container');
+    const slides = document.querySelectorAll('.slide');
+    const arrowLeft = document.querySelector('.arrow.left');
+    const arrowRight = document.querySelector('.arrow.right');
+  
+    let currentIndex = 0;
+  
+    // Function to move to the next slide
+    function nextSlide() {
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0; // Loop back to the first slide
+      }
+      updateSlider();
+    }
+  
+    // Function to move to the previous slide
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = slides.length - 1; // Loop to the last slide
+      }
+      updateSlider();
+    }
+  
+    // Function to update the slider position
+    function updateSlider() {
+      const slideWidth = slides[currentIndex].clientWidth;
+      sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+  
+    // Event listeners for the arrows
+    arrowLeft.addEventListener('click', prevSlide);
+    arrowRight.addEventListener('click', nextSlide);
+  
+    // Optional: Auto-play the carousel
+    // setInterval(nextSlide, 5000); // Uncomment this line to enable auto-play
+  });
 
-nextButton.addEventListener('click', () => {
-  if (index < items.length - 1) {
-    index++;
-  } else {
-    index = 0;
-  }
-  updateCarousel();
-});
+
+
+
+

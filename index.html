@@ -157,10 +157,9 @@
                       id="message"
                       name="Message"
                       maxlength="5000"
-                      data-name="Message"
                       placeholder="Enter your message here..."
-                      required=""
-                      class="onhover-input text-area w-input"
+                      required
+                      class="text-area"
                     ></textarea>
                   </div>
                   <div class="input-contactus conatctus-inputs-submit">
@@ -169,10 +168,10 @@
                         type="submit"
                         data-wait="Please wait..."
                         id="submit"
-                        class="onhover-input  contact-btn w-button"
+                        class="onhover-input contact-btn w-button"
                         value="Send Message"
                       />
-                      <div class="arrow ">
+                      <div class="arrow">
                         <i class="fa-solid fa-arrow-right-long icon-rotate"></i>
                       </div>
                     </div>
@@ -184,30 +183,138 @@
         </div>
       </div>
     </div>
-    <div class="container2 pd-top-180px---bottom-180px">
-      <div class="carousel-container">
-        <h1>Our Locations</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit at risus eget nunc, habitant sed dolor nec <span class="text-no-wrap">mattis tellus.</span> 
 
+    <div class="container2 pd-top-180px---bottom-180px">
+      <div class="main-location-text">
+        <h1>Our locations</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit at risus eget
+          nunc, habitant sed dolor nec
+          <span class="text-no-wrap">mattis tellus.</span>
         </p>
-        <div class="carousel">
+      </div>
+      <div class="carousel-container">
+        <div class="carousel-outer">
           <div class="carousel-inner">
-            <div class="carousel-item">
-              <h2>New York</h2>
-              <p>Address: 21 Essex St., New York, NY 10002</p>
-              <p>Email: newyork@venture.com</p>
-              <button>Visit office 21</button>
+            <div class="slider-container">
+
+
+
+               <div class="slide">
+                <a
+                  href="https://goo.gl/maps/Z6tHY6rRZcbWRDqM8"
+                  target="_blank"
+                  class="slide-card"
+                >
+                  <div class="slide-content">
+                    <div class="slide-image">
+                      <img
+                        src="https://cdn.prod.website-files.com/63b35bc8dc137ac88b7fc7a0/63b35bc8dc137ace5f7fc81e_venture-about-our-locations-new-york.jpg"
+                        alt="New York"
+                      />
+                    </div>
+                    <div class="slide-details">
+                      <h3>San Francisco</h3>
+                      <div class="address">
+                        <div class="title">Address</div>
+                        <div class="subtitle">
+                          2084 Hayes St, San Francisco, CA 94117
+                        </div>
+                      </div>
+                      <div class="email">
+                        <div class="title">Email</div>
+                        <div class="subtitle">sanfrancisco@venture.com</div>
+                      </div>
+                      <div class="visit-link">
+                        <span>Visit office</span>
+                        <span class="icon"></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- Slide 1: San Francisco -->
+              <div class="slide">
+                <a
+                  href="https://goo.gl/maps/TqZqeqf24wEDiEE47"
+                  target="_blank"
+                  class="slide-card"
+                >
+                  <div class="slide-content">
+                    <div class="slide-image">
+                      <img
+                        src="https://cdn.prod.website-files.com/63b35bc8dc137ac88b7fc7a0/63b35bc8dc137ace5f7fc81e_venture-about-our-locations-new-york.jpg"
+                        alt="San Francisco"
+                      />
+                    </div>
+                    <div class="slide-details">
+                      <h3>San Francisco</h3>
+                      <div class="address">
+                        <div class="title">Address</div>
+                        <div class="subtitle">
+                          2084 Hayes St, San Francisco, CA 94117
+                        </div>
+                      </div>
+                      <div class="email">
+                        <div class="title">Email</div>
+                        <div class="subtitle">sanfrancisco@venture.com</div>
+                      </div>
+                      <div class="visit-link">
+                        <span>Visit office</span>
+                        <span class="icon"></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Slide 2: New York -->
+              <div class="slide">
+                <a
+                  href="https://goo.gl/maps/Z6tHY6rRZcbWRDqM8"
+                  target="_blank"
+                  class="slide-card"
+                >
+                  <div class="slide-content">
+                    <div class="slide-image">
+                      <img
+                        src="https://cdn.prod.website-files.com/63b35bc8dc137ac88b7fc7a0/63b35bc8dc137ace5f7fc81e_venture-about-our-locations-new-york.jpg"
+                        alt="New York"
+                      />
+                    </div>
+                    <div class="slide-details">
+                      <h3>New York</h3>
+                      <div class="address">
+                        <div class="title">Address</div>
+                        <div class="subtitle">
+                          21 Essex St, New York, NY 10002
+                        </div>
+                      </div>
+                      <div class="email">
+                        <div class="title">Email</div>
+                        <div class="subtitle">newyork@venture.com</div>
+                      </div>
+                      <div class="visit-link">
+                        <span>Visit office</span>
+                        <span class="icon"></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Add more items as needed -->
             </div>
-            <div class="carousel-item">
-              <h2>Another Location</h2>
-              <p>Address: 123 Another St., Another City, AC 12345</p>
-              <p>Email: another@venture.com</p>
-              <button>Visit office 22</button>
-            </div>
-            <!-- Add more items as needed -->
           </div>
-          <button class="carousel-control prev">&#10094;</button>
-          <button class="carousel-control next">&#10095;</button>
+        </div>
+      </div>
+      <div class="line"><div class="line-width"></div></div>
+      <div class="slider-arrows">
+        <div class="arrow left">
+          <i class="fa-solid fa-arrow-left arrow-color"></i>
+        </div>
+        <div class="arrow right">
+          <i class="fa-solid fa-arrow-right arrow-color"></i>
         </div>
       </div>
     </div>

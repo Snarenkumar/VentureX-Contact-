@@ -14,6 +14,7 @@ body {
   line-height: 1.667em;
   background-color: #060606;
   color: #bababa;
+  overflow-x:hidden;
 }
 
 nav {
@@ -184,22 +185,8 @@ nav {
 .outline {
   outline: none;
 }
-.arrow :hover {
 
-  transform: translate3d(3px, -3px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-  transform-style: preserve-3d;
 
-}
-/* #message:hover {
- 
-  border-color: #0047ff;
-  box-shadow: 0 2px 12px 0 #14142b1a;
-  color: white;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-
-} */
 
 
 #message {
@@ -517,7 +504,7 @@ input[type="checkbox"] {
 
 .carousel-container {
   max-width: 800px;
-  margin: 50px auto;
+  
   text-align: center;
 }
 .carousel-container p{
@@ -556,6 +543,7 @@ h1 {
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  
 }
 
 .carousel-item {
@@ -613,5 +601,228 @@ h1 {
 
 .pd-top-180px---bottom-180px {
   padding-top: 180px;
-  padding-bottom: 180px;
+  padding-bottom: 38px;
+}
+.line {
+  padding-top: 38px;
+  padding-bottom: 72px;
+}
+.line-width {
+  background-color: #8b8b8b;
+  height: 1px;
+}
+.container2 {
+  max-width: 1268px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-area {
+  width: 100%; /* Full width */
+  padding: 10px; /* Inner spacing */
+  font-family: inherit; /* Inherit font from parent */
+  font-size: 16px; /* Default font size */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px; /* Minimum height */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.text-area:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle focus shadow */
+}
+
+.text-area::placeholder {
+  color: #999; /* Light gray placeholder text */
+  font-style: italic; /* Italic placeholder text */
+}
+
+
+
+/* Icon Styling */
+.main-location-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 475px;
+  text-align: center;
+  color: #bababa;
+  font-weight: 500;
+  line-height: 1.344em;
+  margin-bottom: 80px;
+   margin-top: 16px;
+}
+
+.arrow-color{
+  color: white;
+}
+
+.main-location-text p {
+
+  margin-top: 0;
+  margin-bottom: 0;
+  
+  text-align: center;
+} 
+
+.carousel-outer {
+  position: relative;
+  overflow-x:visible;
+}
+
+.carousel-inner {
+  opacity: 1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: static;
+  text-align: center;
+  clear: both;
+}
+
+/* Slider Container */
+.slider {
+  position: relative;
+  max-width: 947px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Slide Styling */
+.slide {
+  flex: 0 0 100%;
+  padding-right: 80px; /* Spacing between slides */
+  box-sizing: border-box;
+  
+}
+
+
+.slide-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.slide-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.slide-image img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  border-radius: 8px;
+  
+}
+
+.slide-details {
+  text-align: start;
+  
+  flex: 1;
+}
+
+.slide-details h3 {
+  font-size: 2rem;
+  margin-bottom: 38px;
+  color: white;
+  
+}
+
+.address,
+.email {
+  margin-bottom: 44px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.167em;
+  text-align: start;
+}
+
+.subtitle {
+  color: #bababa;
+  text-align: start;
+  
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.087em;
+  white-space: normal;
+}
+
+.visit-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.visit-link .icon {
+  font-size: 20px;
+}
+
+/* Slider Arrows */
+.slider-arrows {
+  position: relative;
+  
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 30px;
+  
+}
+
+.arrow:hover {
+  color: #007bff;
+}
+
+/* Slider Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dots .dot.active {
+  background-color: #007bff;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
 }
