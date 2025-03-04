@@ -68,8 +68,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optional: Auto-play the carousel
     // setInterval(nextSlide, 5000); // Uncomment this line to enable auto-play
   });
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const answer = item.nextElementSibling;
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+        } else {
+            answer.style.display = 'block';
+        }
+    });
+});
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const accordionItem = header.closest('.accordion-item-wrapper');
+        const accordionBody = accordionItem.querySelector('.acordion-body');
+        const iconWrapper = accordionItem.querySelector('.accordion-icon-wrapper');
 
+        // Toggle body visibility
+        if (accordionBody.style.height === '0px' || accordionBody.style.height === '') {
+            accordionBody.style.height = 'auto';
+            accordionBody.style.opacity = '1';
+        } else {
+            accordionBody.style.height = '0px';
+            accordionBody.style.opacity = '0';
+        }
 
+        // Toggle icon rotation
+        iconWrapper.classList.toggle('active');
+    });
+});
 
 
 
