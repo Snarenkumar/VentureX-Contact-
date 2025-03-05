@@ -284,6 +284,8 @@ a {
 }
 #active:checked ~ .wrapper {
   right: 0;
+  
+  
 }
 
 .right-container1 {
@@ -817,15 +819,15 @@ h1 {
   margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 180px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
-  border-bottom: 0.75px solid #8b8b8b;
+  
 }
 
 .continer3-updown-margin {
   padding-top: 180px;
-  padding-bottom: 180px;
+  padding-bottom: 90px;
 }
 .faq {
   display: flex;
@@ -860,15 +862,358 @@ h1 {
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 40px;
+  border-bottom: 0.75px solid white;
 
+}
+.faq-questions:hover{
+  transition: transform .3s;
+  
+  transform: translate(8px);
 }
 .question-outer {
   margin-bottom: 48px;
-}
-.accordion-icon-wrapper.active .accordion-btn-line.vertical {
-  transform: rotate(0deg) !important;
+  
 }
 
-.accordion-icon-wrapper.active .accordion-btn-line.horizontal {
-  transform: rotate(0deg) !important;
+.accordion-big-number-wrapper {
+  display: flex;
+  flex-direction: row;
+
+
+}
+.display-3 {
+  color: #0047ff;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.28em;
+}
+.accordion-header {
+  margin-left:24px ;
+  margin-top: 18px;
+}
+.accordion-icon-wrapper {
+  margin-top: 28px;
+}
+.mg-bottom {
+  margin-left:24px;
+  
+}
+.accordion-title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.429em;
+  color: white;
+}
+/* Accordion Body Transition */
+.acordion-body {
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+/* Icon Wrapper */
+.accordion-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+/* Icon Lines */
+.accordion-btn-line.v2 {
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn-line.v2.vertical {
+  transform: rotate(90deg); /* Start as "+" */
+}
+
+.accordion-btn-line.v2.horizontal {
+  transform: rotate(0deg); /* Start as "+" */
+}
+
+/* Active State for Icon (When FAQ is open) */
+.accordion-icon-wrapper.active .accordion-btn-line.v2.vertical {
+  transform: rotate(45deg); /* Rotate to form "×" */
+}
+
+.accordion-icon-wrapper.active .accordion-btn-line.v2.horizontal {
+  transform: rotate(-45deg); /* Rotate to form "×" */
+}
+
+
+/* Accordion Body Transition */
+.acordion-body {
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+/* Icon Wrapper */
+.accordion-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+
+/* Active State for Accordion Title */
+.accordion-item-wrapper.active .accordion-title {
+  color: #0047ff; /* Change text color to #0047ff */
+  position: relative;
+  bottom: 5px;
+  /* Add bottom border */
+}
+.faq-questions.active {
+  
+  border-bottom: 0.75px solid #0047ff; /* Add bottom border */
+}
+
+
+/* Icon Lines */
+.accordion-btn-line.v2 {
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn-line.v2.vertical {
+  transform: rotate(90deg); /* Start as "+" */
+}
+
+.accordion-btn-line.v2.horizontal {
+  transform: rotate(0deg); /* Start as "+" */
+}
+
+/* Active State for Icon (When FAQ is open) */
+.accordion-icon-wrapper.active .accordion-btn-line.v2.vertical {
+  transform: rotate(45deg); /* Rotate to form "×" */
+}
+
+.accordion-icon-wrapper.active .accordion-btn-line.v2.horizontal {
+  transform: rotate(-45deg); /* Rotate to form "×" */
+}
+
+/* Active State for FAQ Questions */
+.accordion-item-wrapper.active .faq-questions {
+  color: #0047ff; /* Change text color to #0047ff */
+  border-bottom: 0.75px solid #0047ff; /* Add bottom border */
+}
+
+
+
+
+
+
+/*! now */
+
+.footer-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 0.75px solid white;
+  align-items: center;
+  text-align: center;
+  padding-top: 116px;
+  padding-bottom: 84px;
+}
+
+.inner-footer {
+  max-width: 1268px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  
+}
+.footer{
+  margin: 0;
+  padding: 0;
+  border-top: 0.75px solid white;
+  
+ 
+  display: flex;
+  flex-direction: column;
+}
+.mainlogo-text-footer {
+  display: flex;
+}
+
+.logo-footer a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-footer {
+  width: 100%;
+  max-width: 250px;
+
+  transition: transform 0.3s, color 0.3s;
+}
+
+
+ 
+ .footer {
+  background-color: #000;
+  padding: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding-top: 99px;
+  padding-bottom: 100px;
+}
+.margin-top {
+  margin-top: 45px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #999;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.footer-links {
+  display: flex;
+  flex: 2;
+  justify-content: flex-start;
+  min-width: 660px;
+}
+
+.footer-column {
+  min-width: 150px;
+  opacity: 1;
+}
+.footer-column  {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1em;
+  color: white;
+  
+}
+.footer-column1{
+  min-width: 90px;
+
+}
+.footer-column3 {
+ margin-left: 218px; 
+}
+
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.p-footer p{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  color: #bababa;
+  
+
+}
+.p-footer {
+
+  max-width: 534px;
+  width: 100%;
+
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+  transition: color .3s;
+}
+
+.footer-column ul li a:hover {
+  color:#0047ff ;
+}
+.footer-column ul li{
+
+  margin-bottom: 18px;
+}
+.margin-top-innerfooter {
+  margin-top: 10px;
+}
+.newsletter {
+  flex: 1;
+  min-width: 250px;
+}
+
+.newsletter h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+.newsletter button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  
+}
+
+
+.flex-footer {
+  display: flex;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer-button-inside {
+  position: relative;
+  left: 10px;
+}
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 15px;
+  font-size: 20px;
 }

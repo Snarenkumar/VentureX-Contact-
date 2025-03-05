@@ -79,25 +79,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
 document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const accordionItem = header.closest('.accordion-item-wrapper');
-        const accordionBody = accordionItem.querySelector('.acordion-body');
-        const iconWrapper = accordionItem.querySelector('.accordion-icon-wrapper');
+  header.addEventListener('click', () => {
+    const accordionItem = header.closest('.accordion-item-wrapper');
+    const accordionBody = accordionItem.querySelector('.acordion-body');
+    const iconWrapper = accordionItem.querySelector('.accordion-icon-wrapper'); // Target the icon wrapper
 
-        // Toggle body visibility
-        if (accordionBody.style.height === '0px' || accordionBody.style.height === '') {
-            accordionBody.style.height = 'auto';
-            accordionBody.style.opacity = '1';
-        } else {
-            accordionBody.style.height = '0px';
-            accordionBody.style.opacity = '0';
-        }
+    // Toggle body visibility
+    if (accordionBody.style.height === '0px' || accordionBody.style.height === '') {
+      accordionBody.style.height = accordionBody.scrollHeight + 'px';
+      accordionBody.style.opacity = '1';
+    } else {
+      accordionBody.style.height = '0px';
+      accordionBody.style.opacity = '0';
+    }
 
-        // Toggle icon rotation
-        iconWrapper.classList.toggle('active');
-    });
+    // Toggle active state on the icon wrapper
+    iconWrapper.classList.toggle('active');
+  });
 });
-
-
-
