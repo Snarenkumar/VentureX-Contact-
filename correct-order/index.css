@@ -1064,6 +1064,9 @@ input[type="checkbox"] {
   body {
     font-size: 16px;
     overflow-x: hidden;
+
+
+    
   }
   .input {
     min-height: 60px;
