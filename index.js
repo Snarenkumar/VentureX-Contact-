@@ -1,86 +1,52 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const nav = document.querySelector(".nav");
-//     const navTrigger = document.querySelector(".navTrigger");
-//     const navList = document.querySelector(".navlinks");
+// Counter initialization
+let counterval = 0;
+document.getElementById("counter").innerText = counterval;
 
-//     // Shrink navbar on scroll
-//     window.addEventListener("scroll", function() {
-//         if (window.scrollY > 50) {
-//             nav.classList.add("affix");
-//         } else {
-//             nav.classList.remove("affix");
-//         }
-//     });
+// Carousel functionality
+document.addEventListener('DOMContentLoaded', function () {
+  const sliderContainer = document.querySelector('.slider-container');
+  const slides = document.querySelectorAll('.slide');
+  const arrowLeft = document.querySelector('.arrow.left');
+  const arrowRight = document.querySelector('.arrow.right');
 
-//     // Toggle mobile menu
-//     navTrigger.addEventListener("click", function() {
-//         navTrigger.classList.toggle("active");
-//         nav.classList.toggle("active");
-//     });
-// });
+  let currentIndex = 0;
 
+  // Move to the next slide
+  function nextSlide() {
+    currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+    updateSlider();
+  }
 
+  // Move to the previous slide
+  function prevSlide() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+    updateSlider();
+  }
 
-const counterval = 0; 
+  // Update slider position
+  function updateSlider() {
+    const slideWidth = slides[currentIndex].clientWidth;
+    sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
 
-document.getElementById("counter").innerText =counterval;
+  // Event listeners for arrows
+  arrowLeft.addEventListener('click', prevSlide);
+  arrowRight.addEventListener('click', nextSlide);
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const sliderContainer = document.querySelector('.slider-container');
-    const slides = document.querySelectorAll('.slide');
-    const arrowLeft = document.querySelector('.arrow.left');
-    const arrowRight = document.querySelector('.arrow.right');
-  
-    let currentIndex = 0;
-  
-    // Function to move to the next slide
-    function nextSlide() {
-      if (currentIndex < slides.length - 1) {
-        currentIndex++;
-      } else {
-        currentIndex = 0; // Loop back to the first slide
-      }
-      updateSlider();
-    }
-  
-    // Function to move to the previous slide
-    function prevSlide() {
-      if (currentIndex > 0) {
-        currentIndex--;
-      } else {
-        currentIndex = slides.length - 1; // Loop to the last slide
-      }
-      updateSlider();
-    }
-  
-    // Function to update the slider position
-    function updateSlider() {
-      const slideWidth = slides[currentIndex].clientWidth;
-      sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    }
-  
-    // Event listeners for the arrows
-    arrowLeft.addEventListener('click', prevSlide);
-    arrowRight.addEventListener('click', nextSlide);
-  
-    // Optional: Auto-play the carousel
-    // setInterval(nextSlide, 5000); // Uncomment this line to enable auto-play
-  });
-  document.querySelectorAll('.faq-question').forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('active');
-        const answer = item.nextElementSibling;
-        if (answer.style.display === 'block') {
-            answer.style.display = 'none';
-        } else {
-            answer.style.display = 'block';
-        }
-    });
+  // Optional: Auto-play the carousel
+  // setInterval(nextSlide, 5000); // Uncomment to enable auto-play
 });
 
+// FAQ toggle functionality
+document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active');
+    const answer = item.nextElementSibling;
+    answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+  });
+});
 
+// Accordion toggle functionality
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const accordionItem = header.closest('.accordion-item-wrapper');
