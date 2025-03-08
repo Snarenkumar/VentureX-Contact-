@@ -407,13 +407,14 @@ input[type="checkbox"] {
   font-weight: 600;
   line-height: 1.417em;
 }
-
+/* 
 .text-area {
   width: 100%;
   padding: 10px;
   font-family: inherit;
   font-size: 16px;
   border: 1px solid var(--color-border);
+  background-color: var(--color-primary);
   border-radius: 5px;
   resize: vertical;
   min-height: 150px;
@@ -428,6 +429,35 @@ input[type="checkbox"] {
 
 .text-area::placeholder {
   color: var(--color-placeholder);
+  font-style: italic;
+} */
+
+
+.text-area {
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  border: none; /* Removes all borders */
+  border-bottom: 1px solid white; /* Adds only bottom border */
+  border-radius: 0; /* Removes border-radius */
+  resize: vertical;
+  min-height: 150px;
+  box-sizing: border-box;
+  background-color: var(--color-primary);
+  color: white; /* Ensures text is visible */
+}
+
+/* Focus Effect */
+.text-area:focus {
+  outline: none;
+  box-shadow: none; /* Removes any unwanted shadow */
+  border-bottom: 1px solid #007bff; /* Changes color on focus */
+}
+
+/* Placeholder Styling */
+.text-area::placeholder {
+  color: #999;
   font-style: italic;
 }
 

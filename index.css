@@ -15,6 +15,12 @@ body {
   overflow-x: hidden;
 }
 
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body takes the full width of the viewport */
+  max-width: 100%; /* Ensure the body does not exceed the viewport width */
+}
+
 a {
   transition: color 0.3s;
 }
@@ -338,6 +344,13 @@ input[type="checkbox"] {
 .conatctus-inputs-m {
   row-gap: 40px;
   column-gap: 200px;
+  
+}
+.border-bottom-contactus {
+  border-bottom: 1px solid white;
+}
+.border-bottom-contactus:focus {
+  border:1px solid #007bff;
 }
 
 .right-cntainerinner {
@@ -385,6 +398,7 @@ input[type="checkbox"] {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.417em;
+  
 }
 
 .text-area {
@@ -392,18 +406,22 @@ input[type="checkbox"] {
   padding: 10px;
   font-family: inherit;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
   resize: vertical;
   min-height: 150px;
   box-sizing: border-box;
+  background-color: var(--color-primary);
+  
 }
 
 .text-area:focus {
   outline: none;
-  border-color: #007bff;
+  
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-bottom:1px soild #007bff ;
 }
+
 
 .text-area::placeholder {
   color: #999;
@@ -781,6 +799,30 @@ input[type="checkbox"] {
   border: none;
 }
 /* Footer Styles */
+.footer-button {
+  border-style: none none solid;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-bottom-width: 1px;
+  border-color: black black #8b8b8b;
+  border-bottom-color: rgb(139, 139, 139);
+  box-shadow: 0 2px 7px 0 #14142b14;
+  color: #e1e1e1;
+  background-color: #060606;
+  border-radius: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 1.1em;
+  transition: box-shadow 0.3s, color 0.3s, border-color 0.3s;
+  border-bottom: 1px solid #ccc;
+  width: 305px;
+  height: 38px;
+  display: block;
+  font: inherit;
+  font-size: inherit;
+  font-size: 16px;
+}
 .footer-logo {
   display: flex;
   flex-direction: row;
@@ -987,6 +1029,7 @@ input[type="checkbox"] {
 }
 
 /* Media Queries for Responsiveness */
+
 @media (max-width: 1024px) {
   .hero-section {
     flex-direction: column;
